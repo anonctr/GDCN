@@ -13,4 +13,4 @@
 
 - utils/*. Some common functions.
 
-- main_base.py. Run this project by this file.
+- train_base.py. Run this project by this file.
