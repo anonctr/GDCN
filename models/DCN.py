@@ -4,6 +4,7 @@
 """
 import torch
 import torch.nn as nn
+import numpy as np
 from models.basic_layers import FeaturesEmbedding, MultiLayerPerceptron
 
 class DCN(nn.Module):
