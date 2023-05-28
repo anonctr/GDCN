@@ -28,21 +28,3 @@ from models.xDeepFM import CIN, xDeepFM
 from models.WDL import WideAndDeep
 from models.FED import FED
 from models.NON import NON
-
-if __name__ == '__main__':
-    import numpy as np
-
-    fd = [3, 4]
-    embed_dim = 8
-    f_n = np.array([[1, 3], [0, 2], [0, 1], [1, 3]])
-    f_n = torch.from_numpy(f_n).long()
-    model = FNN(fd, embed_dim)
-
-    print(model)
-    label = torch.randint(0, 2, (4, 1)).float()
-    print(label)
-    loss = nn.BCEWithLogitsLoss()
-    pred = model(f_n)
-    print(pred.size())
-    losses = loss(pred, label)
-    print(losses)
